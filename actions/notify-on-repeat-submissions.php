@@ -9,7 +9,7 @@ if (class_exists('NF_Abstracts_Action')) {
         /**
          * @var string
          */
-        protected $_name = 'codeable-notify-administrator-on-repeat-email';
+        protected $_name = 'codeable-notify-administrator-on-repeat-submission';
 
         /**
          * @var array
@@ -33,7 +33,7 @@ if (class_exists('NF_Abstracts_Action')) {
 
             parent::__construct();
 
-            $this->_nicename = __('Codeable Custom Action', 'codeable-amberresources');
+            $this->_nicename = __('Codeable: Notify on Repeat Applicant', 'codeable-amberresources');
 
             $this->_settings['notify-on-repeat-email'] =  array(
                     'name' => 'email_address',
@@ -113,7 +113,7 @@ if (class_exists('NF_Abstracts_Action')) {
             //error_log(print_r($duplicates,true));
             //error_log(print_r($action_settings,true));
             self::send_admin_notification( $form_id, $duplicates , $action_settings , $email);
-            exit;
+
             return $data;
         }
 

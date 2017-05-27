@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Codeable.io Extension - Customizations involving Ninja Forms, WP Job Manager, and more.
-Plugin URI:
-Description:
+Plugin Name: Codeable.io - Extends Ninja Forms, WP Job Manager.
+Plugin URI: https://github.com/atwellpub/ninja-forms-notify-on-repeat-submission
+Description: Custom plugin designed to detect which job an application is related to while sending email notifications for repeat applicants.
 Version: 0.0.1
 Author: Hudson Atwell
 Author URI: http://www.github.com/atwellpub
