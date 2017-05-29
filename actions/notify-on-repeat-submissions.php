@@ -151,11 +151,14 @@ if (class_exists('NF_Abstracts_Action')) {
             $html = str_replace('{{submissions_url}}' , $lookup_url , $html );
             $html = str_replace('{{message_body}}' , $action_settings['email_body'] , $html );
 
-            $headers = "From: " . get_bloginfo('name') . " <" .  get_bloginfo('admin_email') . ">\n";
-            $headers .= 'Content-type: text/html';
+            /* set content type */
+            add_filter( 'wp_mail_content_type', 'codeable_set_content_type' );
+            function codeable_set_content_type( $content_type ) {
+                return 'text/html';
+            }
 
             foreach ($emails as $email) {
-                wp_mail( trim($email) , $action_settings['subject'] , $html , $headers);
+                wp_mail( trim($email) , $action_settings['subject'] , $html );
             }
         }
 

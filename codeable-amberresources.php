@@ -105,6 +105,19 @@ if (!class_exists('Codeable_AmberResources')) {
                 return $job_id;
             }
 
+            /* if field does not contian job_id as a key then return */
+            if ( isset($field_settings['key']) && $field_settings['key'] == 'job_date') {
+
+                /* get job id from referring URL */
+                $referrer = wp_get_referer();
+                $parts = explode('job/' , $referrer);
+                $job_id = (isset($parts[1])) ? str_replace('/','',$parts[1]) : 'no job id detected';
+
+                /* get post_date from job id id from referring URL */
+                $job = get_post($job_id);
+                return (isset($job->post_date)) ? $job->post_date : 'not set';
+            }
+
 
             return $value;
         }

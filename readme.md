@@ -1,6 +1,5 @@
 # Installation
 
-The supportive plugin is already installed amberresources.wpengine.com under the location /wp-content/plugins/codeable-amberresources
 
 ![image alt text](image_0.png)
 
@@ -8,7 +7,7 @@ The supportive plugin is already installed amberresources.wpengine.com under the
 
 ## Creating a hidden field inside of Ninja Form Application
 
-In order to accept detecting of which Job ID a user clicked to fill out our Ninja Forms application we will need to create a hidden field in our application called ‘job_id’. This is already complete for the form titled, "Commercial Driver Employment Application".
+In order to accept detecting of which Job ID a user clicked to fill out our Ninja Forms application we will need to create a hidden field in our application called ‘job_id’.
 
 ![image alt text](image_1.png)
 
@@ -16,7 +15,7 @@ In order to accept detecting of which Job ID a user clicked to fill out our Ninj
 
 ## Creating an administrative email notification when repeating submission email detected
 
-The next step is to set up an "Action" on our form that will tell it to send an email notification to a recipient when a form submission is detected to have a previous submission under the same email address. This is already setup on Amber Resources but the email address needs to be updated.
+The next step is to set up an "Action" on our form that will tell it to send an email notification to a recipient when a form submission is detected to have a previous submission under the same email address. 
 
 ![image alt text](image_3.png)
 
@@ -43,4 +42,3 @@ Here’s a preview of what our notification email looks like. If we click the pr
 ![image alt text](image_7.png)
 
 ![image alt text](image_8.png)
-
